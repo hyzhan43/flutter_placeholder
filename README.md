@@ -1,5 +1,6 @@
 # flutter_placeholder
-A Flutter PlaceHolder widget
+
+# A Flutter PlaceHolder widget
 
 
 Use this package as a library

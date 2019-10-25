@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_placeholder/constant/ColorRes.dart';
 
-class EmptyView<T> extends StatelessWidget {
-
+class EmptyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Image.network("http://b-ssl.duitang.com/uploads/item/201208/30/20120830173930_PBfJE.jpeg"),
+    );
   }
 }
-
-
