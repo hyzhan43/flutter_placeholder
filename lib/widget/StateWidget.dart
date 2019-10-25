@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_placeholder/provider/StateProvider.dart';
+import 'package:flutter_placeholder/view/LoadingView.dart';
 
-import '../EmptyView.dart';
-import '../ErrorView.dart';
-import '../LoadingView.dart';
+import '../view/EmptyView.dart';
+import '../view/ErrorView.dart';
 import 'ProviderWidget.dart';
 
 class StateWidget<T extends StateProvider> extends StatefulWidget {

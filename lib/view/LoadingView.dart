@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_placeholder/constant/ColorRes.dart';
 
-import 'constant/ColorRes.dart';
 
 class LoadingView extends StatelessWidget {
   @override

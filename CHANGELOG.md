@@ -1,3 +1,3 @@
 ## [0.0.1] - 2019-10-25.
 
-* Flutter 占位组件.
+* A Flutter PlaceHolder widget.

@@ -1,7 +1,7 @@
 name: flutter_placeholder
-description: Flutter 占位组件.
+description: A Flutter PlaceHolder widget.
 version: 0.0.1
-author: hyzhan
+author: hyzhan <hyzhan43@163.com>
 homepage: https://github.com/hyzhan43/flutter_placeholder
 
 environment:
