@@ -5,7 +5,12 @@ class EmptyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.network("http://b-ssl.duitang.com/uploads/item/201208/30/20120830173930_PBfJE.jpeg"),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text("空空如也  ：) ")
+        ],
+      ),
     );
   }
 }

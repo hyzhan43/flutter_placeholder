@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_placeholder/view/EmptyView.dart';
-import 'package:flutter_placeholder/view/ErrorView.dart';
-import 'package:flutter_placeholder/view/LoadingView.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,7 +38,7 @@ class TestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("hhhh"),
+      child: Image.asset('images/ic_empty.png'),
     );
   }
 }
