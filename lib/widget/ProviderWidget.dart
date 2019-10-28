@@ -29,15 +29,13 @@ class _ProviderWidgetState<T extends ChangeNotifier>
 
     provider = widget.provider;
 
-    if (widget.onReady != null) {
-      widget.onReady(provider);
-    }
+    widget.onReady?.call(provider);
   }
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<T>(
-      builder: (context) => provider,
+    return ChangeNotifierProvider<T>.value(
+      value: provider,
       child: Consumer<T>(
         child: widget.child,
         builder: widget.builder,

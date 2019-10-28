@@ -12,7 +12,7 @@ class StateProvider with ChangeNotifier {
 
   bool get isEmpty => _state == WidgetState.empty;
 
-  bool get isContent => _state == WidgetState.complete;
+  bool get isComplete => _state == WidgetState.complete;
 
   _setViewState(WidgetState state) {
     this._state = state;

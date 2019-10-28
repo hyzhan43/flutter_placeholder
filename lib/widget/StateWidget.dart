@@ -45,9 +45,7 @@ class _StateWidgetState<T extends StateProvider> extends State<StateWidget> {
     provider = widget.provider ?? StateProvider();
     onRetry = widget.onRetry ?? widget.onReady;
 
-    if (widget.onReady != null) {
-      widget.onReady(provider);
-    }
+    widget.onReady?.call(provider);
   }
 
   @override
@@ -62,7 +60,7 @@ class _StateWidgetState<T extends StateProvider> extends State<StateWidget> {
   Widget _buildContent(BuildContext context, T provider, Widget child) {
     if (provider.isLoading) {
       return widget.loading ?? LoadingView();
-    } else if (provider.isContent) {
+    } else if (provider.isComplete) {
       return widget.builder(context, provider, child);
     } else if (provider.isEmpty) {
       return widget.empty ?? EmptyView();
