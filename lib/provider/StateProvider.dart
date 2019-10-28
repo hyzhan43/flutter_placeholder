@@ -19,11 +19,11 @@ class StateProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  setLoadingState() => _setViewState(WidgetState.loading);
+  showLoading() => _setViewState(WidgetState.loading);
 
-  setEmptyState() => _setViewState(WidgetState.empty);
+  showEmpty() => _setViewState(WidgetState.empty);
 
-  setErrorState() => _setViewState(WidgetState.error);
+  showError() => _setViewState(WidgetState.error);
 
-  setCompleteState() => _setViewState(WidgetState.complete);
+  showComplete() => _setViewState(WidgetState.complete);
 }

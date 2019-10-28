@@ -8,7 +8,7 @@ class EmptyView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text("空空如也  ：) ")
+          Text("空空如也  :) ")
         ],
       ),
     );
