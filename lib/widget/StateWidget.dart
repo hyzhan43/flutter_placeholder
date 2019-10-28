@@ -10,6 +10,7 @@ class StateWidget<T extends StateProvider> extends StatefulWidget {
   final T provider;
   final Widget child;
   final Function(T) onReady;
+  final Function(T) onRetry;
   final ValueWidgetBuilder<T> builder;
 
   final Widget loading;
@@ -21,6 +22,7 @@ class StateWidget<T extends StateProvider> extends StatefulWidget {
     @required this.builder,
     this.provider,
     this.onReady,
+    this.onRetry,
     this.child,
     this.loading,
     this.error,
@@ -34,11 +36,14 @@ class StateWidget<T extends StateProvider> extends StatefulWidget {
 class _StateWidgetState<T extends StateProvider> extends State<StateWidget> {
   T provider;
 
+  Function(T) onRetry;
+
   @override
   void initState() {
     super.initState();
 
     provider = widget.provider ?? StateProvider();
+    onRetry = widget.onRetry ?? widget.onReady;
 
     if (widget.onReady != null) {
       widget.onReady(provider);
@@ -62,7 +67,7 @@ class _StateWidgetState<T extends StateProvider> extends State<StateWidget> {
     } else if (provider.isEmpty) {
       return widget.empty ?? EmptyView();
     } else {
-      return widget.error ?? ErrorView();
+      return widget.error ?? ErrorView<T>(onRetry: onRetry);
     }
   }
 }
