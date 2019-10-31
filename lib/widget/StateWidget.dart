@@ -30,10 +30,10 @@ class StateWidget<T extends StateProvider> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _StateWidgetState createState() => _StateWidgetState<T>();
+  _StateWidgetState<T> createState() => _StateWidgetState<T>();
 }
 
-class _StateWidgetState<T extends StateProvider> extends State<StateWidget> {
+class _StateWidgetState<T extends StateProvider> extends State<StateWidget<T>> {
   T provider;
 
   Function(T) onRetry;
